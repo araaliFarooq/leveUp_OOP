@@ -1,6 +1,3 @@
-import phonenumbers
-from phonenumbers import carrier
-from phonenumbers.phonenumberutil import number_type
 import re
 
 def validate_email(email):
