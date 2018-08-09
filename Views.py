@@ -1,21 +1,31 @@
 from Models import Users
+from validation import validate_contact, validate_email
 
 
 users =[]
 
-class SignUp(object):
-    def __init__(self, first_name, second_name, contact, email):
-        self.first_name = first_name
-        self.second_name = second_name
-        self.contact = contact
-        self.email = email
+def combine_names(first_name, second_name):
+    full_name = first_name +" "+ second_name
+    return full_name
 
-    def combine_names(self, first_name, second_name):
-        full_name = first_name +" "+ second_name
-        return full_name
+def submit():
+    first_name = input("Enter your first name: ")
+    second_name = input("Enter your last name: ")
+    contact = input("Enter your phone number: ")
+    
+    if not validate_contact(contact):
+        print("Wrong phone number entered")
 
-    def submit(self, first_name, second_name, contact, email):
-        pass
+    email = input("Enter your email address: ")
 
-    def validate_data(self):
+    if not validate_email(email):
+        print("Wrong email address entered")
+
+    full_name = combine_names(first_name, second_name)
+
+    new_user = Users(first_name, second_name, contact, email)       
+        
+     
+
+   
               
