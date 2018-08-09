@@ -10,7 +10,8 @@ def combine_names(first_name, second_name):
 
 def add_new_user(full_name,contact, email):
     new_user = Users(full_name, contact, email)
-    return all_users.append(new_user)
+    all_users.append(new_user)
+    return True
     
 def submit():
     first_name = input("Enter your first name: ")
