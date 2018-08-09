@@ -13,4 +13,8 @@ class SignUp(object):
         full_name = first_name +" "+ second_name
         return full_name
 
-    def submit(self, first_name, second_name, contact, email):   
+    def submit(self, first_name, second_name, contact, email):
+        pass
+
+    def validate_data(self):
+              
