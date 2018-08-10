@@ -42,6 +42,7 @@ def submit():
     print("New user added:")
 
     for user in all_users:
+        print("")
         print( "full name: "+user.full_name )
         print( "Contact: "+user.contact )
         print( "Email: "+user.email )
