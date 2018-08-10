@@ -35,15 +35,19 @@ def submit():
     full_name = combine_names(first_name, second_name)
     add_new_user(full_name, contact, email)
 
-    print("")
-    print("New user added:")
-    print("--------------")
-
-    for user in all_users:
+    if len(all_users) > 0:
         print("")
-        print( "full name: "+user.full_name )
-        print( "Contact: "+user.contact )
-        print( "Email: "+user.email )
+        print("New user added:")
+        print("--------------")
+
+        for user in all_users:
+            print("")
+            print( "full name: "+user.full_name )
+            print( "Contact: "+user.contact )
+            print( "Email: "+user.email )
+
+        return True
+    return False    
 
 if __name__ == '__main__':
     submit()    
