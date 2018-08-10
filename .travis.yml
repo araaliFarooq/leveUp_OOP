@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.6.5"
+# command to install dependencies
+install:
+  - pip install coveralls
+# command to run tests
+script:
+  - python3 -m unittest -v
+  - coverage run --source='.' unittest
+  - coverage report
+
+after_success:
+- coveralls
