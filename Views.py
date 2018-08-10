@@ -8,12 +8,11 @@ def combine_names(first_name, second_name):
     full_name = first_name +" "+ second_name
     return full_name
 
-# def show_all_users():
-#     if len(users) > 0:
-#         print( user.__dict__ for user in users)
-
-    # print("No users added yet")    
-
+def add_new_user(full_name,contact, email):
+    new_user = Users(full_name, contact, email)
+    all_users.append(new_user)
+    return True
+    
 def submit():
     first_name = input("Enter your first name: ")
     second_name = input("Enter your last name: ")
@@ -35,17 +34,21 @@ def submit():
             break    
 
     full_name = combine_names(first_name, second_name)
+    add_new_user(full_name, contact, email)
 
-    new_user = Users(full_name, contact, email)
-    all_users.append(new_user)
-
-    print("New user added:")
-
-    for user in all_users:
+    if len(all_users) > 0:
         print("")
-        print( "full name: "+user.full_name )
-        print( "Contact: "+user.contact )
-        print( "Email: "+user.email )
+        print("New user added:")
+        print("--------------")
+
+        for user in all_users:
+            print("")
+            print( "full name: "+user.full_name )
+            print( "Contact: "+user.contact )
+            print( "Email: "+user.email )
+
+        return True
+    return False    
 
 if __name__ == '__main__':
     submit()    
