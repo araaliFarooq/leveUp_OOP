@@ -1,5 +1,5 @@
 import unittest
-from Views import combine_names, add_new_user
+from Views import add_new_user, combine_names
 
 
 class Test_Views(unittest.TestCase):
