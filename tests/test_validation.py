@@ -1,5 +1,5 @@
 import unittest
-from validation import validate_email, validate_contact
+from ..validation import validate_email, validate_contact
 
 class Test_Validation(unittest.TestCase):
 

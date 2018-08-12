@@ -1,5 +1,5 @@
-from Models import Users
-from validation import validate_contact, validate_email
+from .Models import Users
+from .validation import validate_contact, validate_email
 
 
 all_users =[]
